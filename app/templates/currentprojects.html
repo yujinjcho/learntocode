@@ -2,15 +2,28 @@
 <html>
 
 <body>
-	{% extends "layout.html" %}
-	{% block content %}
+  {% extends "layout.html" %}
+  {% block content %}
 
-	<div class="home">
-		<h1>Coding Projects</h1>
-		
-		<div class="container">
-        <!-- Projects Row -->
+  <div class="home">
+    <h1>Coding Projects</h1>
+    
+    <div class="container">
+      <!-- Projects Row -->
       <div class="row">
+        <div class="col-md-6 portfolio-item">
+          <a href="http://itspong.com/" target="_blank">
+              <!-- picture dimensions must be 700x400-->
+              <img class="img-responsive" src="static\itspong.png" alt="" style="border:1px solid #CCCCCC">
+          </a>
+          <h3>
+              <a href="http://itspong.com/" target="_blank">ItsPong</a> 
+              <br>
+              <a style="font-size:15px" href="https://github.com/yujinjcho/itspong" target="_blank">Github link</a> 
+          </h3>
+          <p>Help people find local ping pong games. Learning how to use OAuth and geolocation.</p>
+        </div>      
+
         <div class="col-md-6 portfolio-item">
           <a href="http://poong.herokuapp.com/" target="_blank">
               <img class="img-responsive" src="static\poong.png" alt="" style="border:1px solid #CCCCCC">
@@ -20,9 +33,14 @@
               <br>
               <a style="font-size:15px" href="https://github.com/yujinjcho/messagingforum" target="_blank">Github link</a> 
           </h3>
-          <p>Login and say hi to everyone. Learning how to integrate postgreSQL and Facebook SDK</p>
+          <p>Login and say hi to everyone. Learning how to integrate postgreSQL and Facebook SDK.</p>
         </div>
+      </div>
+      <!-- /.row -->
 
+      <!-- Projects Row -->
+      <div class="row">
+        
         <div class="col-md-6 portfolio-item">
           <a href="{{ url_for('home') }}" target="_blank">
               <img class="img-responsive" src="static\code.png" alt="" style="border:1px solid #CCCCCC">
@@ -34,12 +52,7 @@
           </h3>
           <p>Personal website for keeping track of programming projects and resources. Learning how to use Flask, Heroku, and Bootstrap.</p>
         </div>
-        
-      </div>
-      <!-- /.row -->
 
-      <!-- Projects Row -->
-      <div class="row">
         <div class="col-md-6 portfolio-item">
           <a href="http://timer-sessions.bitballoon.com/" target="_blank">
               <img class="img-responsive" src="static\timer.png" alt="" style="border:1px solid #CCCCCC">
@@ -51,23 +64,27 @@
           </h3>
           <p>Tool used to help manage work sessions inspired by the Pomodoro method. Learning how to integrate Javascript, CSS, and HTML.</p>
         </div>
+      </div>
 
-        <div class="col-md-6 portfolio-item">
-          <a href="http://tictactoe-verysmart.bitballoon.com/" target="_blank">
-              <img class="img-responsive" src="static\tictactoe.png" alt="" style="border:1px solid #CCCCCC">
-          </a>
-          <h3>
-              <a href="http://tictactoe-verysmart.bitballoon.com/" target="_blank">AlphaTicTacToe</a>
-              <br>
-              <a style="font-size:15px" href="https://github.com/yujinjcho/tictactoe" target="_blank">Github link</a> 
-          </h3>
-          <p>Unbeatable TicTacToe Game. Learning how to integrate Javascript, CSS, and HTML.</p>
-        </div>
-            
-    </div>
-		
-	</div>
-	{% endblock %}
+    <!-- Projects Row -->
+    <div class="row">
+      <div class="col-md-6 portfolio-item">
+        <a href="http://tictactoe-verysmart.bitballoon.com/" target="_blank">
+            <img class="img-responsive" src="static\tictactoe.png" alt="" style="border:1px solid #CCCCCC">
+        </a>
+        <h3>
+            <a href="http://tictactoe-verysmart.bitballoon.com/" target="_blank">AlphaTicTacToe</a>
+            <br>
+            <a style="font-size:15px" href="https://github.com/yujinjcho/tictactoe" target="_blank">Github link</a> 
+        </h3>
+        <p>Unbeatable TicTacToe Game. Learning how to integrate Javascript, CSS, and HTML.</p>
+      </div>      
+    </div>  
+
+
+    
+  </div>
+  {% endblock %}
 </body>
 </html>
 
